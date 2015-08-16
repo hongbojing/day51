@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>day #</title>
+  <link rel="stylesheet" href="css/jquery.gridster.css">
+  <link rel="stylesheet" href="css/demo.css">
+
+</head>
+<body>
+  <div class="gridster">
+    <ul></ul>
+  </div>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/lib/jquery.gridster.js"></script>
+  <script type="text/javascript" id="code">
+
+    var gridster;
+
+    $(function(){
+
+      gridster = $(".gridster > ul").gridster({
+        widget_margins: [5, 5],
+        widget_base_dimensions: [100, 55]
+      }).data('gridster');
+
+      var widgets = [
+        ['<img src="images/b1.png">',3,5],
+        ['<img src="images/b2.png">',3,5],
+        ['<img src="images/b3.png">',3,5],
+        ['<img src="images/b4.png">',3,5],
+        ['<img src="images/b5.png">',3,5],
+        ['<img src="images/b6.png">',3,5],
+        ['<img src="images/b7.png">',3,5],
+        ['<img src="images/b8.png">',3,5],
+        ['<img src="images/b9.png">',3,5],
+        ['<img src="images/b10.png">',3,5],
+        ['<img src="images/b11.png">',3,5],
+        ['<img src="images/b12.png">',3,5],
+        ['<img src="images/b13.png">',3,5],
+        ['<img src="images/b14.png">',3,5],
+        ['<img src="images/b15.png">',3,5],
+        ['<img src="images/b16.png">',3,5],
+
+      ];
+
+      $.each(widgets, function(i, widget){
+        gridster.add_widget.apply(gridster, widget)
+      });
+
+    });
+  </script>
+</body>
+</html>
