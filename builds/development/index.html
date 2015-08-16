@@ -21,6 +21,13 @@
     var gridster;
 
     $(function(){
+      //generate a random array
+      var testArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
+      testArray.sort(function() {
+        return .15 - Math.random();
+      });
+      console.log(testArray);
+
 
       gridster = $(".gridster > ul").gridster({
         widget_margins: [5, 5],
@@ -28,28 +35,48 @@
       }).data('gridster');
 
       var widgets = [
-        ['<img src="images/b1.png">',3,5],
-        ['<img src="images/b2.png">',3,5],
-        ['<img src="images/b3.png">',3,5],
-        ['<img src="images/b4.png">',3,5],
-        ['<img src="images/b5.png">',3,5],
-        ['<img src="images/b6.png">',3,5],
-        ['<img src="images/b7.png">',3,5],
-        ['<img src="images/b8.png">',3,5],
-        ['<img src="images/b9.png">',3,5],
-        ['<img src="images/b10.png">',3,5],
-        ['<img src="images/b11.png">',3,5],
-        ['<img src="images/b12.png">',3,5],
-        ['<img src="images/b13.png">',3,5],
-        ['<img src="images/b14.png">',3,5],
-        ['<img src="images/b15.png">',3,5],
-        ['<img src="images/b16.png">',3,5],
+        //assign the random array to the elements
+        ['<img src="images/b'+testArray[0]+'.png">',3,5],
+        ['<img src="images/b'+testArray[1]+'.png">',3,5],
+        ['<img src="images/b'+testArray[2]+'.png">',3,5],
+        ['<img src="images/b'+testArray[3]+'.png">',3,5],
+        ['<img src="images/b'+testArray[4]+'.png">',3,5],
+        ['<img src="images/b'+testArray[5]+'.png">',3,5],
+        ['<img src="images/b'+testArray[6]+'.png">',3,5],
+        ['<img src="images/b'+testArray[7]+'.png">',3,5],
+        ['<img src="images/b'+testArray[8]+'.png">',3,5],
+        ['<img src="images/b'+testArray[9]+'.png">',3,5],
+        ['<img src="images/b'+testArray[10]+'.png">',3,5],
+        ['<img src="images/b'+testArray[11]+'.png">',3,5],
+        ['<img src="images/b'+testArray[12]+'.png">',3,5],
+        ['<img src="images/b'+testArray[13]+'.png">',3,5],
+        ['<img src="images/b'+testArray[14]+'.png">',3,5],
+        ['<img src="images/b'+testArray[15]+'.png">',3,5]
 
       ];
 
       $.each(widgets, function(i, widget){
         gridster.add_widget.apply(gridster, widget)
       });
+
+
+//      var randomArray=[];
+//
+//      while(randomArray.length<17){
+//        for(var i=1;i<17;i++){
+//          var randomNumber = Math.floor(Math.random() * 16) + 1;
+//          //if array length equals to 0, push it into the array
+//          if(randomArray.length==0){
+//            randomArray.push(randomNumber);
+//            continue;
+//          }
+//
+//          if(randomArray.indexOf(randomNumber)==-1){
+//            randomArray.push(randomNumber);
+//          }
+//        }
+//      }
+//      console.log(randomArray);
 
     });
   </script>
